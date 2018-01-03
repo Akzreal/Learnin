@@ -1,7 +1,9 @@
 var gulptest = require('gulp');
 var gulpwatch = require('gulp-watch');
-
-
+var postcss = require('gulp-postcss');
+var autoprefix = require('autoprefixer');
+var cssvars = require('postcss-simple-vars');
+var nested = require('postcss-nested');
 
 gulptest.task( 'default' , function(){
   console.log('Hello Moaoa');
@@ -12,7 +14,10 @@ gulptest.task( 'hoho' , function(){
 });
 
 gulptest.task( 'styl' , function(){
-  console.log('hehes');
+  return gulptest.src('./app/assets/styles/files.css')
+    .pipe(postcss([cssvars, nested,autoprefix]))
+      .pipe(gulptest.dest('./app/temp/styles'));
+
 });
 
 
