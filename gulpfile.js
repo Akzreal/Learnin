@@ -11,7 +11,7 @@ gulptest.task( 'default' , function(){
 });
 
 gulptest.task( 'hoho' , function(){
-  console.log('hehe');
+  console.log('Change(s) made to html Document');
 });
 
 gulptest.task( 'styl' , function(){
