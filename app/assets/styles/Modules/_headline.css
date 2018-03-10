@@ -1,48 +1,50 @@
-.headline{
-  font-weight: 300;
-
+.headline {
   font-size: 1.9rem;
-  color: $mainblue;
+  font-weight: 300;
+  color: $mainBlue;
 
-@mixn atSmall{
-
+  @mixin atSmall {
     font-size: 2.875rem;
-}
-  &--centered{
+  }
+
+  &--centered {
     text-align: center;
   }
 
-  &--orange{
-    color: $secorange;
+  &--orange {
+    color: $mainOrange;
   }
 
-  &--small{
-
-    font-size: 1.2375rem;
-    @mixin atSmall{
-    font-size: 1.875rem;
+  &--small {
+    font-size: 1.2rem;
+    @mixin atSmall {
+      font-size: 1.875rem;
+    }
   }
- }
 
-  &--narrow{
+  &--narrow {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-      }
+  }
 
-    &--light{
-      font-weight: 100;
-    }
+  &--light {
+    font-weight: 100;
+  }
 
-    &--bmarginsmall{
-        margin-bottom: .5em;
-    }
+  strong {
+    font-weight: 400;
+  }
 
-    &--bmarginlarge{
-      margin-bottom: 1.6em;
-    }
+  &--b-margin-small {
+    margin-bottom: .5em;
+  }
 
-    &--no-t-margin{
-      margin-top: 0;
-    }
+  &--b-margin-large {
+    margin-bottom: 1.6em;
+  }
+
+  &--no-t-margin {
+    margin-top: 0;
+  }
 }
